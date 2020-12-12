@@ -1,4 +1,4 @@
-# Hexops' Dockerfile best practices <a href="https://hexops.com"><img align="right" height="36px" alt="Hexops logo" src="https://raw.githubusercontent.com/hexops/media/master/logo_whitebg.svg"></img></a>
+# Dockerfile best practices <a href="https://hexops.com"><img align="right" height="36px" alt="Hexops logo" src="https://raw.githubusercontent.com/hexops/media/master/logo_whitebg.svg"></img></a>
 
 Writing production-worthy Dockerfiles is, unfortunately, not as simple as you would imagine. Most Docker images in the wild fail here, and even professionals often[[1]](https://github.com/docker-library/postgres/issues/175) get[[2]](https://github.com/prometheus/prometheus/issues/3441) this[[2]](https://github.com/caddyserver/caddy-docker/issues/104) wrong[[3]](https://github.com/docker-library/postgres/issues/796).
 
