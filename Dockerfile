@@ -1,4 +1,6 @@
 # Replace latest with a pinned version tag from https://hub.docker.com/_/alpine
+#
+# We suggest using the major.minor tag, not major.minor.patch.
 FROM alpine:latest
 
 # Non-root user for security purposes.
