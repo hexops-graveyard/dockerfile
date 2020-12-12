@@ -2,7 +2,7 @@
 
 Writing production-worthy Dockerfiles is, unfortunately, not as simple as you would imagine. Even professionals often[1](https://github.com/docker-library/postgres/issues/175) get[2](https://github.com/prometheus/prometheus/issues/3441) this[2](https://github.com/docker-library/postgres/pull/791) wrong[3](https://github.com/docker-library/postgres/issues/796).
 
-These are best-practices for writing Dockerfiles I (@slimsag) have, often quite painfully, learned over the years both from my personal projects and from my work at @srcgraph. This is all guidance, not a mandate - there may sometimes be reasons to not do what is described here, but if you _don't know_ then this is probably what you should be doing.
+These are best-practices for writing Dockerfiles I (@slimsag) have, often quite painfully, learned over the years both from my personal projects and from my work @sourcegraph. This is all guidance, not a mandate - there may sometimes be reasons to not do what is described here, but if you _don't know_ then this is probably what you should be doing.
 
 ## How can I use this?
 
