@@ -1,4 +1,4 @@
-# hexops/dockerfile: the Dockerfile you should start with <a href="https://hexops.com"><img align="right" height="36px" alt="Hexops logo" src="https://raw.githubusercontent.com/hexops/media/master/logo_whitebg.svg"></img></a>
+# Hexops' Dockerfile: the Dockerfile you should start with <a href="https://hexops.com"><img align="right" height="36px" alt="Hexops logo" src="https://raw.githubusercontent.com/hexops/media/master/logo_whitebg.svg"></img></a>
 
 Writing production-worthy Dockerfiles is, unfortunately, not as simple as you would imagine. Even professionals often[1](https://github.com/docker-library/postgres/issues/175) get[2](https://github.com/prometheus/prometheus/issues/3441) this[2](https://github.com/docker-library/postgres/pull/791) wrong[3](https://github.com/docker-library/postgres/issues/796).
 
