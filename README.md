@@ -71,7 +71,7 @@ And `CMD` be only arguments for your command:
 CMD ["--foo", "1", "--bar=2"]
 ```
 
-It allows people to eronomically pass arguments to your binary without having to guess its name, e.g. they can write:
+It allows people to ergonomically pass arguments to your binary without having to guess its name, e.g. they can write:
 
 ```sh
 docker run yourimage --help
