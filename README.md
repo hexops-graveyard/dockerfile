@@ -79,6 +79,8 @@ If you want your Dockerfile to run on old/legacy Linux systems and Docker for Ma
 
 For additional details [see here](https://github.com/sourcegraph/godockerize/commit/5cf4e6d81720f2551e6a7b2b18c63d1460bbbe4e#commitcomment-45061472).
 
+(Applies to Alpine Linux base images only)
+
 ## FAQ
 
 - [Is `tini` still required in 2020? I thought Docker added it natively?](is-tini-still-required-in-2020-i-thought-docker-added-it-natively)
