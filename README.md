@@ -39,7 +39,13 @@ We suggest pinning image tags using a specific image `version` using `major.mino
 1. Keeping your builds working (`latest` means your build can arbitrarily break in the future, whereas `major.minor` _should_ mean this doesn't happen)
 2. Getting the latest security updates included in new images you build.
 
-You may also consider using `major.minor.patch` or SHA pinning, which can guarantee the image doesn't change _but_ at the cost of having to ensure you always update the SHA to include new security fixes when you build new versions of your images. This is a tradeoff, see e.g. [this blog post](https://rockbag.medium.com/why-you-should-pin-your-docker-images-with-sha-instead-of-tags-fd132443b8a6) - others may advise you use SHA pinning, but if you do this you _really_ should look at how you are going to handle security fixes in your third-party Docker images because you need to ensure you release a new version of your image with the insecure dependency images updated (you should do this anyway using tooling like container registry security scanners, but using `major.minor` tags helps make this less likely if you are NOT going to do that.)
+### Why you perhaps shouldn't pin with a SHA
+
+SHA pinning gives you completely reliable and reproducable builds, but it also likely means you won't have any obvious way to pull in important security fixes from the base images you use. If you use `major.minor` tags, you get security fixes by accident when you build new versions of your image - at the cost of builds being less reproducable.
+
+**Consider using [docker-lock](https://github.com/safe-waters/docker-lock)**: this tool keeps track of exactly which Docker image SHA you are using for builds, while having the actual image you use still be a `major.minor` version. This allows you to reproduce your builds as if you'd used SHA pinning, while getting important security updates when they are released as if you'd used `major.minor` versions.
+
+If you're a large company/organization willing to spin up infrastructure like image security scanners, automated dependency updating, etc. then [consider this approach](#hould-i-really-use-major-minor-over-sha-pinning) as well.
 
 ## Use `tini` as your ENTRYPOINT
 
