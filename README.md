@@ -92,8 +92,7 @@ Unfortunately, although Docker did add it natively, [it is optional](https://git
 
 It depends. We advise `major.minor` pinning here because we believe it is the most likely thing that the average developer creating a new Docker image can effectively manage day-to-day that provides the most security. If you're a larger company/organization, you might consider instead however:
 
-- Using one of the many tools for automated image vulnerability scanning, such as [GCR Vulnerability Scanning](https://cloud.google.com/containe
-r-analysis/docs/vulnerability-scanning) so you know _when your images have vulnerabilities_.
+- Using one of the many tools for automated image vulnerability scanning, such as [GCR Vulnerability Scanning](https://cloud.google.com/container-analysis/docs/vulnerability-scanning) so you know _when your images have vulnerabilities_.
 - Using SHA pinning so you know your images will not change without your approval.
 - Using automated image tag update software, [such as Renovate](https://docs.renovatebot.com/docker/) to update your image tags and get notified.
 - An extensive review process to ensure you don't accept untrustworthy image tag updates.
