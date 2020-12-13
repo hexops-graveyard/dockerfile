@@ -78,3 +78,24 @@ If `CMD` includes the binary name, then they must guess what your binary name is
 If you want your Dockerfile to run on old/legacy Linux systems and Docker for Mac versions and wish to avoid DNS resolution issues, install bind-tools.
 
 For additional details [see here](https://github.com/sourcegraph/godockerize/commit/5cf4e6d81720f2551e6a7b2b18c63d1460bbbe4e#commitcomment-45061472).
+
+## FAQ
+
+- [Is `tini` still required in 2020? I thought Docker added it natively?](is-tini-still-required-in-2020-i-thought-docker-added-it-natively)
+- [Should I really use major.minor over SHA pinning?](#should-i-really-use-major-minor-over-sha-pinning)
+
+### Is `tini` still required in 2020? I thought Docker added it natively?
+
+Unfortunately, although Docker did add it natively, [it is optional](https://github.com/krallin/tini#using-tini) (you have to pass `--init` to the `docker run` command). Additionally, because it is a feature of the runtime and e.g. Kubernetes will not use the Docker runtime but rather a different container runtime [it is not always the default](https://stackoverflow.com/questions/50803268/kubernetes-equivalent-of-docker-run-init/50819443#50819443) so it is best if your image provides a valid entrypoint like `tini` instead.
+
+### Should I really use major.minor over SHA pinning?
+
+It depends. We advise `major.minor` pinning here because we believe it is the most likely thing that the average developer creating a new Docker image can effectively manage day-to-day that provides the most security. If you're a larger company/organization, you might consider instead however:
+
+- Using one of the many tools for automated image vulnerability scanning, such as [GCR Vulnerability Scanning](https://cloud.google.com/containe
+r-analysis/docs/vulnerability-scanning) so you know _when your images have vulnerabilities_.
+- Using SHA pinning so you know your images will not change without your approval.
+- Using automated image tag update software, [such as Renovate](https://docs.renovatebot.com/docker/) to update your image tags and get notified.
+- An extensive review process to ensure you don't accept untrustworthy image tag updates.
+
+However, this obviously requires much more work and infrastructure so we don't advise it here with the expectation that _most_ people would pin a SHA and likely never update it again - thus never getting security fixes into their images.
