@@ -89,7 +89,7 @@ For additional details [see here](https://github.com/sourcegraph/godockerize/com
 
 ## FAQ
 
-- [Is `tini` still required in 2020? I thought Docker added it natively?](is-tini-still-required-in-2020-i-thought-docker-added-it-natively)
+- [Is `tini` still required in 2020? I thought Docker added it natively?](#is-tini-still-required-in-2020-i-thought-docker-added-it-natively)
 - [Should I really use major.minor over SHA pinning?](#should-i-really-use-major-minor-over-sha-pinning)
 
 ### Is `tini` still required in 2020? I thought Docker added it natively?
