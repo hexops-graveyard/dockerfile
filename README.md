@@ -6,7 +6,7 @@ This repository has best-practices for writing Dockerfiles that I (@slimsag) hav
 
 ## How to use this
 
-Copy https://github.com/hexops/dockerfile/blob/main/Dockerfile into your own project and follow the comments to create _your_ Dockerfile.
+Copy [the Dockerfile](https://github.com/hexops/dockerfile/blob/main/Dockerfile) into your own project and follow the comments to create _your_ Dockerfile.
 
 ## Best practices included in the Dockerfile
 
