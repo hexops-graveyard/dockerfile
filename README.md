@@ -26,7 +26,7 @@ Running containers as a non-root user substantially decreases the risk that cont
 
 ## Do not use a UID below 10,000
 
-UIDs below 10,000 are a security risk on several systems, because if someone does manage to escalate priviledges outside the Docker container their Docker container UID may overlap with a more priviledged system user's UID granting them additional permissions. For best security, always run your processes as a UID above 10,000.
+UIDs below 10,000 are a security risk on several systems, because if someone does manage to escalate priviledges outside the Docker container their Docker container UID may overlap with a more privileged system user's UID granting them additional permissions. For best security, always run your processes as a UID above 10,000.
 
 ## Use a static UID and GID
 
