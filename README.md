@@ -22,11 +22,11 @@ The following are included in the Dockerfile in this repository:
 
 ## Run as a non-root user
 
-Running containers as a non-root user substantially decreases the risk that container -> host priviledge escalation could occur. This is an added security benefit. ([Docker docs](https://docs.docker.com/engine/security/#linux-kernel-capabilities), [Bitnami blog post](https://engineering.bitnami.com/articles/why-non-root-containers-are-important-for-security.html))
+Running containers as a non-root user substantially decreases the risk that container -> host privilege escalation could occur. This is an added security benefit. ([Docker docs](https://docs.docker.com/engine/security/#linux-kernel-capabilities), [Bitnami blog post](https://engineering.bitnami.com/articles/why-non-root-containers-are-important-for-security.html))
 
 ## Do not use a UID below 10,000
 
-UIDs below 10,000 are a security risk on several systems, because if someone does manage to escalate priviledges outside the Docker container their Docker container UID may overlap with a more privileged system user's UID granting them additional permissions. For best security, always run your processes as a UID above 10,000.
+UIDs below 10,000 are a security risk on several systems, because if someone does manage to escalate privileges outside the Docker container their Docker container UID may overlap with a more privileged system user's UID granting them additional permissions. For best security, always run your processes as a UID above 10,000.
 
 ## Use a static UID and GID
 
