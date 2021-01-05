@@ -45,7 +45,7 @@ SHA pinning gives you completely reliable and reproducable builds, but it also l
 
 **Consider using [docker-lock](https://github.com/safe-waters/docker-lock)**: this tool keeps track of exactly which Docker image SHA you are using for builds, while having the actual image you use still be a `major.minor` version. This allows you to reproduce your builds as if you'd used SHA pinning, while getting important security updates when they are released as if you'd used `major.minor` versions.
 
-If you're a large company/organization willing to spin up infrastructure like image security scanners, automated dependency updating, etc. then [consider this approach](#hould-i-really-use-major-minor-over-sha-pinning) as well.
+If you're a large company/organization willing to spin up infrastructure like image security scanners, automated dependency updating, etc. then [consider this approach](#should-i-really-use-majorminor-over-sha-pinning) as well.
 
 ## Use `tini` as your ENTRYPOINT
 
