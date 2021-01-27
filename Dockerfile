@@ -17,6 +17,8 @@ RUN addgroup -g 10001 -S nonroot && adduser -u 10000 -S -G nonroot -h /home/nonr
 # into /sbin/, etc.
 
 # Tini allows us to avoid several Docker edge cases, see https://github.com/krallin/tini.
+# NOTE: If you are using Docker 1.13 (Docker Engine API v1.25) or greater, Tini is included in Docker itself.
+# This includes all versions of Docker CE. To enable Tini, just pass the --init flag to docker run.
 RUN apk add --no-cache tini
 ENTRYPOINT ["/sbin/tini", "--", "myapp"]
 # Replace "myapp" above with your binary
