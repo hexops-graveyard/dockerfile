@@ -13,7 +13,7 @@ Copy [the Dockerfile](https://github.com/hexops/dockerfile/blob/main/Dockerfile)
 The following are included in the Dockerfile in this repository:
 
 - [Run as a non-root user](#run-as-a-non-root-user)
-- [Do not use a UID below 10,000](#do-not-use-a-uid-below-10-000)
+- [Do not use a UID below 10,000](#do-not-use-a-uid-below-10000)
 - [Use a static UID and GID](#use-a-static-uid-and-gid)
 - [Do not use `latest`, pin your image tags](#do-not-use-latest-pin-your-image-tags)
 - [Use `tini` as your ENTRYPOINT](#use-tini-as-your-entrypoint)
