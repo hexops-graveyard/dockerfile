@@ -1,6 +1,6 @@
 # Dockerfile best practices <a href="https://hexops.com"><img align="right" alt="Hexops logo" src="https://raw.githubusercontent.com/hexops/media/master/readme.svg"></img></a>
 
-Writing production-worthy Dockerfiles is, unfortunately, not as simple as you would imagine. Most Docker images in the wild fail here, and even professionals often[[1]](https://github.com/docker-library/postgres/issues/175) get[[2]](https://github.com/prometheus/prometheus/issues/3441) this[[2]](https://github.com/caddyserver/caddy-docker/issues/104) wrong[[3]](https://github.com/docker-library/postgres/issues/796).
+Writing production-worthy Dockerfiles is, unfortunately, not as simple as you would imagine. Most Docker images in the wild fail here, and even professionals often[[1]](https://github.com/docker-library/postgres/issues/175) get[[2]](https://github.com/prometheus/prometheus/issues/3441) this[[3]](https://github.com/caddyserver/caddy-docker/issues/104) wrong[[4]](https://github.com/docker-library/postgres/issues/796).
 
 This repository has best-practices for writing Dockerfiles that I (@slimsag) have quite painfully learned over the years both from my personal projects and from my work @sourcegraph. This is all guidance, not a mandate - there may sometimes be reasons to not do what is described here, but if you _don't know_ then this is probably what you should be doing.
 
