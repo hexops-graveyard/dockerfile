@@ -11,7 +11,8 @@ FROM alpine:latest
 #
 # Static GID/UID is also useful for chown'ing files outside the container where
 # such a user does not exist.
-RUN addgroup -g 10001 -S nonroot && adduser -u 10000 -S -G nonroot -h /home/nonroot nonroot
+RUN addgroup --gid 10001 --system nonroot \
+ && adduser  --uid 10000 --system --ingroup nonroot --home /home/nonroot nonroot
 
 # Install packages here with `apk add --no-cache`, copy your binary
 # into /sbin/, etc.
